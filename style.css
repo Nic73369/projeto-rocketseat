@@ -179,3 +179,37 @@ footer {
 body {
     height: 100vh;
 }
+
+@keyframes slideIn {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slideBack {
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+#switch button {
+    animation: slideBack 0.2s;
+}
+
+.light #switch button {
+    left: 50%;
+    right: auto;
+    animation: slideIn 0.4s forwards;
+}
+
+#switch button:hover {
+    outline: 8px solid var(--highlight-color);
+}
